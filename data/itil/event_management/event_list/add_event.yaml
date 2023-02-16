@@ -1,0 +1,180 @@
+# 公共参数
+case_common:
+  allureEpic: ITIl
+  allureFeature: 事件管理
+  allureStory: 新增事件
+
+add_envent_01:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 1
+    severity: 1
+  assert:
+    code: 200
+    reason: OK
+    msg:
+
+add_envent_02:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 1
+    severity: 2
+  assert:
+    code: 200
+    reason: OK
+    msg:
+
+add_envent_03:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 1
+    severity: 3
+  assert:
+    code: 200
+    reason: OK
+    msg:
+
+add_envent_04:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 1
+    severity: 4
+  assert:
+    code: 200
+    reason: OK
+    msg:
+
+add_envent_05:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 2
+    severity: 4
+  assert:
+    code: 200
+    reason: OK
+    msg:
+
+
+add_envent_06:
+  configs: 开发环境
+  baseurl: https://test.1stcs.cn
+  host: test.1stcs.cn
+  method: post
+  api: /webportal/itil/command/incident/add
+  data:
+    spId: 6303440100001
+    scId: 6303440100001
+    sciId: 6303440100001
+    extFields:
+      - id: -6
+        code: ext.sys.field.phone
+        type: 1
+        value: ''
+      - id: 2
+        code: KEY0002
+        type: 1
+        value: ''
+    files: [ ]
+    name: api_auto
+    description: api_auto
+    priority: 3
+    severity: 4
+  assert:
+    code: 200
+    reason: OK
+    msg:

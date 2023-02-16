@@ -1,0 +1,9 @@
+import pytest
+from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
+from httprunner import Parameters
+import os
+from common.setting import *
+from utils.file_utils.csv_utils import CsvUtils
+
+data_path = Path.data_path
+curPath = os.path.abspath(os.path.dirname(__file__))

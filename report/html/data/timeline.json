@@ -1,0 +1,51 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "localhost",
+    "children" : [ {
+      "name" : "25487-MainThread",
+      "children" : [ {
+        "name" : "开发环境—查询事件编号",
+        "uid" : "c03089bd6eea0a0a",
+        "parentUid" : "16ca071f699de0447f3ed97d6e42e36a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675677144454,
+          "stop" : 1675677144929,
+          "duration" : 475
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'configs': '开发环境', 'case_name': '查询事件编号', 'baseurl': 'https://test.1stcs.cn', 'host': 'test.1stcs.cn', 'skey': 'IREQ-20221215-00010', 'code': 200, 'reason': 'OK', 'msg': 'IREQ-20221215-00010'}" ]
+      } ],
+      "uid" : "16ca071f699de0447f3ed97d6e42e36a"
+    }, {
+      "name" : "25488-MainThread",
+      "children" : [ {
+        "name" : "开发环境—查询事件标题",
+        "uid" : "7fa60ed126d2fc2a",
+        "parentUid" : "cc12efb8fee3d1314e8317444c8afaf4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675677144454,
+          "stop" : 1675677144919,
+          "duration" : 465
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'configs': '开发环境', 'case_name': '查询事件标题', 'baseurl': 'https://test.1stcs.cn', 'host': 'test.1stcs.cn', 'skey': 'IREQ-20221215-00010', 'code': 200, 'reason': 'OK', 'msg': 'IREQ-20221215-00010'}" ]
+      } ],
+      "uid" : "cc12efb8fee3d1314e8317444c8afaf4"
+    } ],
+    "uid" : "be30f600e0434356d35178c8efd2dc81"
+  } ]
+}

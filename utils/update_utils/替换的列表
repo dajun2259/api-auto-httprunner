@@ -1,0 +1,16 @@
+@pytest.mark.parametrize(
+        "param",
+        Parameters({"BASE_URL-Configs-Host": [
+            ["https://test.1stcs.cn", "开发环境", "test.1stcs.cn"],
+            ["https://dev.1stcs.cn", "测试环境", "dev.1stcs.cn"]
+        ]}))
+    def test_start(self, param):
+        super().test_start(param)
+
+    config = (
+        Config("$Configs")
+        .variables(**{})
+        .base_url("$BASE_URL")
+        .verify(False)
+        .export(*[])
+    )

@@ -1,0 +1,62 @@
+# 项目名称
+project_name:
+  - ITIL
+
+# 执行人
+tester_name: 陈鑫
+
+# 实时更新用例内容，False时，已生成的代码不会在做变更
+# 设置为True的时候，修改yaml文件的用例，代码中的内容会实时更新
+real_time_update_test_cases: False
+
+host: https://dev.1stcs.cn  # 老的域名配置信息, 换成新配置以后可以去掉
+
+
+# 登录信息，debugtalk.py用到(老的登录配置信息, 换成新的配置以后可以去掉)
+login_config:
+  user_name: 18031160867
+  user_pass: TlRReE5tUTNZMlEyWldZeE9UVmhNR1kzTmpJeVlUbGpOVFppTlRWbE9EUT0=
+  dev_tenantId: 10 # 测试环境租户id，10是测试服务商001
+  test_tenantId: 522 # 开发环境租户id，522是1stcs
+
+# 接口录制存储路径
+record_info:
+  # 需要录制url
+  host: https://dev.1stcs.cn
+  # 监听地址
+  listen_host: '127.0.0.1'
+  # 监听端口
+  listen_port: 8889
+  # 存储的路径地址
+  path: yanshi2
+
+# 批量修改录制下来的接口请求信息路径
+updata_path: yanshi2
+
+# 默认web用例，如果执行app，改为app
+api_type: web
+
+
+# 邮箱信息
+email:
+  # 发件人邮箱
+  send_user:
+  email_host:
+  # 授权码
+  stamp_key:
+  # 收件人邮箱
+  send_list:
+
+# 钉钉机器人信息
+DingTalk:
+  webhook: # 需要创建钉钉机器人后获取，自行百度吧
+  secret:  # 需要创建钉钉机器人后获取，自行百度吧
+
+# 数据库信息
+mysql_db:
+  host: testdb.1stcs.cn
+  user: i1stcs
+  password: i1stcs.net
+  database: itil
+  port: 3306
+

@@ -1,0 +1,13 @@
+# metersphere的har导入配置信息
+ms:
+  ip_port: devops.1stcs.cn:8081
+  user: VIWKMlVSw+xppMIk4YWLIY/QHzByUvOoqCr5jgCueSJwKRhb4zE7KvReTOXHDYW2Z+iG0TfoIq/1Fp4htoPHOS0Cg8KSKgNsO1JRSMT2vRLPzz6mkbzzLcWL0rwZGkLicxa9RFpOYfPXbQxJejPjH/NAt4P45Dy8KeTMW/ml2Ro=
+  pwd: BK0mY7TmlI6EBEw1xhzSm1o1JDzI7j85Kd8/mlAyCgJEF/rPHCUCMgpCBK0NNjOgUHITcXOrDIY2hJ/PH6PyySp+iDx6AR0NMMG8qIl4DY+RG4KsiFhM4RoaZbxLM3t31Jw0UPV0fSKUG8gGGZxixaehx5ybNXKlW3/mcf+/1p8=
+  workspace_id: 2380bdf4-66f2-11ed-b6b5-0242ac1e0a05 # 这是默认工作空间id，一般不变
+  project_id: fcb90278-4cd8-4a8e-855a-9710c80c21b3 # 这是项目id，每个项目id不一样
+  definition: # 接口定义模块汇总导入har的模块id和名称
+    module_id: a869b4c5-dfd2-48a1-aa49-ae94716369d4
+    module_path: /未规划接口
+  automation: # 接口定自动化模块汇总导入har的模块id和路径
+    module_id: 3c864103-3df8-49d4-a277-56f6775cbc05
+    module_path: /未规划场景
