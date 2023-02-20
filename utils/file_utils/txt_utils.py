@@ -28,4 +28,5 @@ def write_txt(file_path, text):
 
 
 if __name__ == '__main__':
-    write_txt("/config/yaml_json/input", "a")
+    a = read_txt("/Users/cx2259/project/api/api_auto_httprunner/utils/file_utils/txt_utils.py")
+    print(a)

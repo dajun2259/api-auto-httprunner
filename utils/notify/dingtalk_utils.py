@@ -35,7 +35,7 @@ class DingTalkSendMsg:
 
         # 从yaml文件中获取钉钉配置信息
         self.getDingTalk = self.config_data['ding_talk']
-        self.project_name = self.config_data['project_name'][0]
+        self.project_name = self.config_data['project_name']
         self.tester_name = self.config_data['tester_name']
 
         # 获取 webhook地址
