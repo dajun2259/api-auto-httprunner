@@ -43,7 +43,7 @@ class %s(HttpRunner):
 
     @pytest.mark.parametrize('param',
                              Parameters(
-                                 YamlUtils().htp_parameterization("%s")))
+                                 YamlUtils().htp_param("%s")))
     def test_start(self, param):
         super().test_start(param)
 
@@ -139,4 +139,4 @@ def case_automatic(filepath):
 
 
 if __name__ == '__main__':
-    case_automatic("/Users/cx2259/project/hengshi/api_auto_test/data/itil/test/query_event.yaml")
+    case_automatic("/Users/cx2259/project/api/api_auto_httprunner/data/collect/collect_add_site.yaml")

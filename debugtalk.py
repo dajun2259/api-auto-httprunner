@@ -1,9 +1,5 @@
 import time
-from pprint import pprint
-
-import requests
 from httprunner import __version__
-
 from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
 
@@ -46,21 +42,5 @@ def timestamps():
     return int(round(time.time() * 1000))
 
 
-def login():
-    url = "https://www.wanandroid.com/user/login"
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-    }
-
-    data = {
-        "username": 18800000001,
-        "password": 123456
-
-    }
-    r = requests.post(url=url, headers=headers, data=data,verify=False)
-    return r.headers
-
-
 if __name__ == '__main__':
-    a = login()
-    pprint(a)
+    pass

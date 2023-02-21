@@ -119,5 +119,5 @@ class YamlUtils:
 
 if __name__ == '__main__':
     a = YamlUtils().htp_param(
-        "itil/event_management/event_list/add_event.yaml", 1)
+        "collect/collect_add_site.yaml")
     pprint(a)
