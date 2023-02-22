@@ -215,7 +215,7 @@ class Test:
 
 
 def runtest():
-    config_result = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+    config_result = YamlUtils().read_yaml(Path.common_path + "config.yaml")
     url = config_result['record_info']['host']  # 包含该地址的接口 才会被捕获
     file_path = Path.har_path + config_result['record_info']['path']  # 文件保存的目录
     if not os.path.exists(file_path):

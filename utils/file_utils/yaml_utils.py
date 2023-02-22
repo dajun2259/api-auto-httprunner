@@ -15,7 +15,7 @@ class YamlUtils:
 
     def __init__(self):
         self.root_path = Path()
-        self.conf_path = self.root_path.config_path
+        self.common_path = self.root_path.common_path
         self.data_path = self.root_path.data_path
 
     def read_yaml(self, filename):

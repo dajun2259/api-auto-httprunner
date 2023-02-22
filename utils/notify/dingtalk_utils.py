@@ -28,7 +28,7 @@ class DingTalkSendMsg:
     def __init__(self):
 
         # 获取config数据
-        self.config_data = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+        self.config_data = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
         self.timeStamp = str(round(time.time() * 1000))
         self.sign = self.get_sign()

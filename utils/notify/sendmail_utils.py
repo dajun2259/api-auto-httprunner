@@ -16,7 +16,7 @@ from utils.loguru_utils import Logger
 class SendEmail:
     def __init__(self):
 
-        self.config_data = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+        self.config_data = YamlUtils().read_yaml(Path.common_path + "config.yaml")
         self.getData = self.config_data['email']
         self.send_user = self.getData['send_user']  # 发件人
         self.email_host = self.getData['email_host']  # QQ 邮件 STAMP 服务器地址

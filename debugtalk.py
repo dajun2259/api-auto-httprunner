@@ -4,7 +4,7 @@ from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
 from utils.login import login
 
-config = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 def get_httprunner_version():

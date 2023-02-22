@@ -12,7 +12,7 @@ from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
 from utils.loguru_utils import Logger
 
-db_info = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+db_info = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 class MysqlUtil:

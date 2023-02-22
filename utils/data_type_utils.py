@@ -12,7 +12,7 @@ import json
 from common.setting import Path
 from utils.loguru_utils import Logger
 
-config_path = Path.config_path
+common_path = Path.common_path
 
 
 def str_conversion(data: Dict) -> dict:
@@ -121,7 +121,7 @@ def json_to_yaml(i):
     :param i: 读取的文件
     :return:
     """
-    with open(config_path + i, encoding="utf-8") as f:
+    with open(common_path + i, encoding="utf-8") as f:
         datas = json.load(f)  # 将文件的内容转换为字典形式
     yaml_datas = yaml.dump(datas, indent=5, sort_keys=False, Dumper=yaml.SafeDumper, allow_unicode=True,
                            default_flow_style=False)  # 将字典的内容转换为yaml格式的字符串
@@ -135,7 +135,7 @@ def yaml_to_json(i):
     :return:
     """
 
-    with open(config_path + i, "r", encoding="utf-8") as f:
+    with open(common_path + i, "r", encoding="utf-8") as f:
         datas = yaml.load(f, Loader=yaml.SafeLoader)  # 将文件的内容转换为字典形式
     json_datas = json.dumps(datas, indent=5, ensure_ascii=False)  # 将字典的内容转换为json格式的字符串
     print(json_datas)

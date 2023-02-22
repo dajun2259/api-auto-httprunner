@@ -28,8 +28,8 @@ class Path:
     if not os.path.exists(report_path):
         os.makedirs(report_path
                     )
-    # config路径
-    config_path = os.path.join(root_path, "config" + _SLASH)
+    # common路径
+    common_path = os.path.join(root_path, "common" + _SLASH)
 
     # har路径
     har_path = os.path.join(root_path, 'har' + _SLASH)
@@ -39,4 +39,4 @@ class Path:
 
 
 if __name__ == '__main__':
-    print(Path.attach_path)
+    print(Path.common_path)

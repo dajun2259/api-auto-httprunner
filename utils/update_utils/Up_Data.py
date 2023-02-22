@@ -16,7 +16,7 @@ from utils.file_utils.files_utils import get_all_files
 from utils.file_utils.yaml_utils import YamlUtils
 from utils.loguru_utils import Logger
 
-config_result = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+config_result = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 class UpdateData:

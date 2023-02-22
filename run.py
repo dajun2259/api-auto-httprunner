@@ -10,7 +10,7 @@ from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
 from utils.loguru_utils import Logger
 
-config = YamlUtils().read_yaml(Path.config_path + "config.yaml")
+config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 def run(case_dir):
