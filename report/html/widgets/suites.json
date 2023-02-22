@@ -1,15 +1,15 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "9114950dd5536caea87797d0dccb09c1",
-    "name" : "testcases.itil.event_management.event_list",
+    "uid" : "932b3b1be5b37d3deb0e3e7b47e76bfe",
+    "name" : "testcases.collect",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 1,
       "unknown" : 0,
-      "total" : 2
+      "total" : 1
     }
   } ]
 }

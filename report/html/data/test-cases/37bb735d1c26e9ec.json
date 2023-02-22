@@ -1,0 +1,106 @@
+{
+  "uid" : "37bb735d1c26e9ec",
+  "name" : "开发环境",
+  "fullName" : "testcases.collect.collect_add_site_test.TestCaseCollectAddSite#test_start",
+  "historyId" : "3034f283a4577879f47bb2f2e2d27047",
+  "time" : {
+    "start" : 1677032595623,
+    "stop" : 1677032597040,
+    "duration" : 1417
+  },
+  "description" : "TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d",
+  "descriptionHtml" : "<p>TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1677032595603,
+      "stop" : 1677032595623,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "step: 开发平台-收藏模块-添加网站",
+      "time" : {
+        "start" : 1677032595628,
+        "stop" : 1677032597039,
+        "duration" : 1411
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases.collect"
+  }, {
+    "name" : "suite",
+    "value" : "collect_add_site_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCaseCollectAddSite"
+  }, {
+    "name" : "host",
+    "value" : "localhost"
+  }, {
+    "name" : "thread",
+    "value" : "26331-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.collect.collect_add_site_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "param",
+    "value" : "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "37bb735d1c26e9ec.json",
+  "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
+}

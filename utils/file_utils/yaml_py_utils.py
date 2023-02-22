@@ -65,39 +65,14 @@ class %s(HttpRunner):
                 }
             )
                 .with_headers(
-                **{
-                    "sec-ch-ua": '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
-                    "x-appkey": "20aT2LDaBDmWG12b",
-                    "x-tz": "-8",
-                    "x-tid": "10",
-                    "authorization": "34add2a6503a7dbe1d789b57a4172484",
-                    "tenantid": "10",
-                    "x-lang": "zh",
-                    "accept": "application/json, text/plain, */*",
-                    "x-user-token": "34add2a6503a7dbe1d789b57a4172484",
-                    "sec-ch-ua-mobile": "?0",
-                    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
-                    "tenanttype": "1",
-                    "sec-ch-ua-platform": '"macOS"',
-                    "sec-fetch-site": "same-origin",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "referer": "$baseurl/console/index.html",
-                    "accept-encoding": "gzip, deflate, br",
-                    "accept-language": "zh-CN,zh;q=0.9",
-                }
+                **{}
             )
                 .with_cookies(
-                **{
-                    "projectId": "",
-                    "projectName": "",
-                    "Admin-Token": "34add2a6503a7dbe1d789b57a4172484",
-                }
+                **{}
             )   .with_json({})
                 .extract()
                 .validate()
                 .assert_equal("status_code", "$code")
-                .assert_equal("body.reason", "$reason")
         ),
     ]
 
@@ -139,4 +114,4 @@ def case_automatic(filepath):
 
 
 if __name__ == '__main__':
-    case_automatic("/Users/cx2259/project/api/api_auto_httprunner/data/collect/collect_add_site.yaml")
+    case_automatic("/Users/cx2259/project/api/api_auto_httprunner/data/demo.yaml")

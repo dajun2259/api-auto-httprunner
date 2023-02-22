@@ -2,6 +2,7 @@ import time
 from httprunner import __version__
 from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
+from utils.login import login
 
 config = YamlUtils().read_yaml(Path.config_path + "config.yaml")
 
@@ -42,5 +43,10 @@ def timestamps():
     return int(round(time.time() * 1000))
 
 
+def login_init():
+    return login()
+
+
 if __name__ == '__main__':
-    pass
+    a = login_init()
+    print(a)

@@ -64,9 +64,9 @@ class CaseAutoParam:
             yaml_name = split_data_path[-1]
             case_name = None
             if yaml_name.endswith(".yaml"):
-                case_name = yaml_name.split(".yaml")[0] + "_test.py"
+                case_name = "test_" + yaml_name.split(".yaml")[0] + ".py"
             elif yaml_name.endswith(".yml"):
-                case_name = yaml_name.split(".yml")[0] + "_test.py"
+                case_name = "test_" + yaml_name.split(".yml")[0] + ".py"
 
             return new_case_path + case_name
         except Exception:

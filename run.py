@@ -5,9 +5,7 @@
 # @Date  : 2022/7/13 19:41
 # @Desc  :
 import os
-
 import pytest
-
 from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
 from utils.loguru_utils import Logger
@@ -37,7 +35,7 @@ def run(case_dir):
 
     pytest.main([f'{case_path}',
                  '-s',
-                 '-n=2',
+                 # '-n=2',
                  '--alluredir', './report/tmp', "--clean-alluredir"
                  ]
                 )
@@ -50,4 +48,4 @@ def run(case_dir):
 
 
 if __name__ == '__main__':
-    run("itil/event_management/event_list/query_event_test.py")
+    run("collect")

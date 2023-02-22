@@ -1,3 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Feb 06 17:52:24 CST 2023","Mon Feb 06 17:52:24 CST 2023","475","testcases.itil.event_management.event_list","query_event_test","TestCaseQueryEvent","","","开发环境—查询事件编号","TestCase ID: 71f523c2-1e78-4179-a7a7-0d4600843d85"
-"passed","Mon Feb 06 17:52:24 CST 2023","Mon Feb 06 17:52:24 CST 2023","465","testcases.itil.event_management.event_list","query_event_test","TestCaseQueryEvent","","","开发环境—查询事件标题","TestCase ID: c4151a17-68be-4de8-91d0-af71cfd41c4c"
+"passed","Wed Feb 22 10:23:15 CST 2023","Wed Feb 22 10:23:17 CST 2023","1417","testcases.collect","collect_add_site_test","TestCaseCollectAddSite","","","开发环境","TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d"
