@@ -8,11 +8,35 @@ import os
 
 from common.setting import Path
 
-path = Path.root_path + os.sep + "requirements.txt"
+root_path = Path.root_path
+path = root_path + os.sep + "requirements.txt"
 
 
 def freeze():
+    """
+    导出当前环境所有依赖库
+    :return:
+    """
     os.system(f"pip3 freeze > {path}")
+
+
+def pipreqs():
+    """
+    导出当前项目的依赖库，有可能导出的不全，需要手动添加下
+    :return:
+    """
+    # # 文件存在先删除
+    # if os.path.isfile(path):
+    #     os.remove(path)
+
+    pip_list = os.popen("pip3 list")
+    result = pip_list.read()
+
+    if "pipreqs" in result:
+        os.system(f"pipreqs {root_path} --encoding=utf-8 --force")
+    else:
+        os.system(f"pip3 install pipreqs -i https://mirrors.aliyun.com/pypi/simple/")
+        os.system(f"pipreqs {root_path} --encoding=utf-8 --force")
 
 
 def install():
@@ -33,5 +57,6 @@ def install():
 
 
 if __name__ == '__main__':
-    freeze()
-    # install()#
+    # freeze()
+    pipreqs()
+    # install()
