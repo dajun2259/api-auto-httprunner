@@ -1,14 +1,14 @@
 import pytest
 from httprunner import HttpRunner, Config, Step, RunRequest
 from httprunner import Parameters
-from utils.file_utils.yaml_utils import YamlUtils
+from utils.data_processing.yaml_process import YamlProcess
 
 
 class TestCaseCollectAddSite(HttpRunner):
 
     @pytest.mark.parametrize('param',
                              Parameters(
-                                 YamlUtils().htp_param("collect/collect_add_site.yaml")))
+                                 YamlProcess().htp_param("collect/collect_add_site.yaml")))
     def test_start(self, param):
         super().test_start(param)
 

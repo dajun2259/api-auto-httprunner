@@ -35,14 +35,14 @@ def write_testcase_file(class_title, data_path, run_request, method, api, case_p
     page = '''import pytest
 from httprunner import HttpRunner, Config, Step, RunRequest
 from httprunner import Parameters
-from utils.file_utils.yaml_utils import YamlUtils
+from utils.data_processing.yaml_process import YamlProcess
 
 
 class %s(HttpRunner):
 
     @pytest.mark.parametrize('param',
                              Parameters(
-                                 YamlUtils().htp_param("%s")))
+                                 YamlProcess().htp_param("%s")))
     def test_start(self, param):
         super().test_start(param)
 

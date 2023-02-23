@@ -2,7 +2,6 @@
 
 本框架主要是基于 Python + HttpRunner3 + Pytest + Allure + log + YAML + 钉钉通知 + Jenkins 实现的接口自动化框架。
 
-* 项目地址：https://gitee.com/dajun2259/api_auto_httprunner.git
 
 ## 技术栈
 * Python3.9、Python3.7
