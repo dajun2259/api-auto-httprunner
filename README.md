@@ -22,6 +22,9 @@
     └── utils                                  // 工具类
         ├── allure_utils                       // allure工具类
             ├── allure_report_data.py          // allure报告数据清洗
+        ├── data_processing_utils              // 数据处理
+            └── data_type_utils.py             // 数据类型转换
+            └── yaml_process_utils.py          // 对读取yaml的数据清洗
         ├── db_utils                           // 数据库工具类
             └── mysql_utils.py                 // mysql基本操作
         ├── file_utils                         // 文件工具类
