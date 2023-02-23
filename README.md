@@ -61,8 +61,9 @@
 * mitmproxy==5.3.0
 * 修改common/config.yaml的record_info信息
 * 开启本地代理
-
+<br />
   注意：端口不要冲突
+<br />
   ![img.png](attach/readme/img.png)
 * 启动utils/recording_utils/mitmproxy_utils.py
 
