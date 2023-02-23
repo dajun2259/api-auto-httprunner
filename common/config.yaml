@@ -8,19 +8,18 @@ tester_name: 陈鑫
 # 设置为True的时候，修改yaml文件的用例，代码中的内容会实时更新
 real_time_update_test_cases: False
 
-host: https://dev.1stcs.cn  # 老的域名配置信息, 换成新配置以后可以去掉
+host: https://www.wanandroid.com  # 老的域名配置信息, 换成新配置以后可以去掉
 
 
 # 登录信息，debugtalk.py用到(老的登录配置信息, 换成新的配置以后可以去掉)
 login_config:
-  user_name: 18031160867
-  user_pass: TlRReE5tUTNZMlEyWldZeE9UVmhNR1kzTmpJeVlUbGpOVFppTlRWbE9EUT0=
-  dev_tenantId: 10 # 测试环境租户id，10是测试服务商001
-  test_tenantId: 522 # 开发环境租户id，522是1stcs
+  user_name: 大君2259
+  user_pass: 123456
+
 
 # 接口录制存储路径
 record_info:
-  # 需要录制url。如：https://www.baidu.com
+  # 需要录制url。如：https://www.wanandroid.com
   host:
   # 监听地址
   listen_host: '127.0.0.1'
@@ -31,10 +30,6 @@ record_info:
 
 # 批量修改录制下来的接口请求信息路径
 updata_path: yanshi2
-
-# 默认web用例，如果执行app，改为app
-api_type: web
-
 
 # 邮箱信息
 email:
@@ -53,9 +48,9 @@ DingTalk:
 
 # 数据库信息
 mysql_db:
-  host: testdb.1stcs.cn
-  user: i1stcs
-  password: i1stcs.net
-  database: itil
-  port: 3306
+  host:
+  user:
+  password:
+  database:
+  port:
 

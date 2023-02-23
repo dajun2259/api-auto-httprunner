@@ -6,8 +6,9 @@
 # @User    : cx2259
 # @Author  : 大君
 # @Description :
-from pprint import pprint
 import requests
+
+
 # import urllib3
 # # 去除警告
 # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -33,4 +34,5 @@ def login():
 
 
 if __name__ == '__main__':
-    login()
+    r = login()
+    print(r)

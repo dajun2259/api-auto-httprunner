@@ -4,7 +4,7 @@ case_common:
   allureFeature: 收藏模块
   allureStory: 添加网站
 
-query_event_01:
+add_site_01:
   configs: 开发环境
   case_name: 输入中文
   host: https://www.wanandroid.com
@@ -16,3 +16,16 @@ query_event_01:
   assert:
     code: 200
     msg: 大君
+
+add_site_02:
+  configs: 开发环境
+  case_name: 输入英文
+  host: https://www.wanandroid.com
+  method: post
+  api: /lg/collect/addtool/json
+  data:
+    name: dajun
+    link: dajun
+  assert:
+    code: 200
+    msg: dajun
