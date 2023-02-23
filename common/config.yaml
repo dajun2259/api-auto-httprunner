@@ -20,13 +20,13 @@ login_config:
 
 # 接口录制存储路径
 record_info:
-  # 需要录制url
-  host: https://dev.1stcs.cn
+  # 需要录制url。如：https://www.baidu.com
+  host:
   # 监听地址
   listen_host: '127.0.0.1'
   # 监听端口
   listen_port: 8889
-  # 存储的路径地址
+  # 存储的路径地址。一般一个模块一个目录
   path: yanshi2
 
 # 批量修改录制下来的接口请求信息路径

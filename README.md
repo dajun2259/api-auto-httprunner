@@ -1,6 +1,6 @@
 ## 框架介绍
 
-本框架主要是基于 Python + HttpRunner3 + Pytest + Allure + log + YAML + 钉钉通知 + Jenkins 实现的Web UI自动化框架。
+本框架主要是基于 Python + HttpRunner3 + Pytest + Allure + log + YAML + 钉钉通知 + Jenkins 实现的接口自动化框架。
 
 * 项目地址：https://gitee.com/dajun2259/api_auto_httprunner.git
 
@@ -55,3 +55,14 @@
     ├── README.md                              // 帮助文档
     ├── requirements.txt                       // 存储项目所用的第三方库
     ├── run.py                                 // 程序运行入口
+
+## 接口录制
+* Python==3.6～3.7
+* mitmproxy==5.3.0
+* 修改common/config.yaml的record_info信息
+* 开启本地代理
+
+  注意：端口不要冲突
+  ![img.png](attach/readme/img.png)
+* 启动utils/recording_utils/mitmproxy_utils.py
+
