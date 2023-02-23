@@ -25,9 +25,6 @@ def pipreqs():
     导出当前项目的依赖库，有可能导出的不全，需要手动添加下
     :return:
     """
-    # # 文件存在先删除
-    # if os.path.isfile(path):
-    #     os.remove(path)
 
     pip_list = os.popen("pip3 list")
     result = pip_list.read()
