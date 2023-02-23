@@ -8,7 +8,7 @@ tester_name: 陈鑫
 # 设置为True的时候，修改yaml文件的用例，代码中的内容会实时更新
 real_time_update_test_cases: False
 
-host: https://www.wanandroid.com  # 老的域名配置信息, 换成新配置以后可以去掉
+host: https://www.wanandroid.com
 
 
 # 登录信息，debugtalk.py用到(老的登录配置信息, 换成新的配置以后可以去掉)
@@ -26,10 +26,10 @@ record_info:
   # 监听端口
   listen_port: 8889
   # 存储的路径地址。一般一个模块一个目录
-  path: yanshi2
+  path: yanshi
 
 # 批量修改录制下来的接口请求信息路径
-updata_path: yanshi2
+updata_path: yanshi
 
 # 邮箱信息
 email:
