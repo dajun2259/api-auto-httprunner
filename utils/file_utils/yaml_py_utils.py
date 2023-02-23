@@ -49,7 +49,7 @@ class %s(HttpRunner):
     config = (
         Config("$configs")
             .variables(**{})
-            .base_url("$baseurl")
+            .base_url("$host")
             .verify(False)
             .export(*[])
     )
@@ -57,11 +57,9 @@ class %s(HttpRunner):
     teststeps = [
         Step(
             RunRequest("%s")
-                .setup_hook('${setup_hooks_request($request)}')
-                .%s("$baseurl%s")
+                .%s("$host%s")
                 .with_params(
-                **{
-                }
+                **{}
             )
                 .with_headers(
                 **{}
