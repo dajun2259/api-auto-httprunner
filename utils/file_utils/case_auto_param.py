@@ -10,7 +10,7 @@ import traceback
 from common.setting import Path
 from utils.file_utils.files_utils import file_capitalize, creat_path, creat_init_py
 from utils.file_utils.yaml_utils import YamlUtils
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 
 class CaseAutoParam:

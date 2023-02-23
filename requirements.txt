@@ -1,7 +1,7 @@
 DingtalkChatbot==1.5.3
 httprunner==3.1.6
 loguru==0.6.0
-mitmproxy==8.1.0
+mitmproxy==5.3.0
 PyMySQL==1.0.2
 pytest==7.0.1
 PyYAML==6.0

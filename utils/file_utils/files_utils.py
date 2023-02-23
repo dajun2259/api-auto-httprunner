@@ -8,7 +8,7 @@ import os
 import re
 import traceback
 
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 
 def get_all_files(file_path):

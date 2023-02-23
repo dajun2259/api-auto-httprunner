@@ -10,7 +10,7 @@ import yaml
 import json
 
 from common.setting import Path
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 common_path = Path.common_path
 

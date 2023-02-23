@@ -17,7 +17,7 @@ import traceback
 
 from common.setting import Path
 from utils.file_utils.files_utils import get_all_files
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 
 def har_convert_py_one(name):

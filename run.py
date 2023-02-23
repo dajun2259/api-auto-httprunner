@@ -8,7 +8,7 @@ import os
 import pytest
 from common.setting import Path
 from utils.file_utils.yaml_utils import YamlUtils
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 

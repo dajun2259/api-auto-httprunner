@@ -10,7 +10,7 @@ import traceback
 import zipfile
 
 from common.setting import Path
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 
 def file_zip(compression_dir, storage_dir):

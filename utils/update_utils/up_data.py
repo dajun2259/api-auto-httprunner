@@ -14,7 +14,7 @@ import re
 from common.setting import Path
 from utils.file_utils.files_utils import get_all_files
 from utils.file_utils.yaml_utils import YamlUtils
-from utils.loguru_utils import Logger
+from utils.log_utils.loguru_utils import Logger
 
 config_result = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
@@ -40,7 +40,7 @@ class UpdateData:
 
         hooks = self.read('替换的hook')
         tihuan = self.read('替换的列表')
-        tihuan_Import = self.read('UP_tou')
+        tihuan_Import = self.read('up_tou')
         new_validate = self.read('替换validate')
 
         case_path = Path.case_path + config_result['updata_path']

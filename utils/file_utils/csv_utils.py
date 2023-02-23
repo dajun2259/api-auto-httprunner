@@ -7,8 +7,8 @@
 import csv
 import traceback
 
-from utils.data_type_utils import dict_str_conversion
-from utils.loguru_utils import Logger
+from utils.data_processing.data_type_utils import dict_str_conversion
+from utils.log_utils.loguru_utils import Logger
 
 
 class CsvUtils:

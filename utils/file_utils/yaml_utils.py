@@ -4,8 +4,8 @@ from pprint import pprint
 import yaml
 
 from common.setting import Path
-from utils.data_type_utils import list_deduplication
-from utils.loguru_utils import Logger
+from utils.data_processing.data_type_utils import list_deduplication
+from utils.log_utils.loguru_utils import Logger
 
 
 class YamlUtils:
