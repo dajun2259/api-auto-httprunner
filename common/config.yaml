@@ -42,7 +42,7 @@ email:
   send_list:
 
 # 钉钉机器人信息
-DingTalk:
+ding_talk:
   webhook: # 需要创建钉钉机器人后获取，自行百度吧
   secret:  # 需要创建钉钉机器人后获取，自行百度吧
 
