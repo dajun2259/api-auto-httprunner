@@ -51,7 +51,7 @@ class YamlUtils:
         :return:
         """
         try:
-            return self.read_yaml(self.conf_path + filename)
+            return self.read_yaml(self.common_path + filename)
         except Exception:
             Logger().error(traceback.format_exc())
 
@@ -120,4 +120,4 @@ class YamlUtils:
 if __name__ == '__main__':
     a = YamlUtils().htp_param(
         "collect/collect_add_site.yaml")
-    pprint(a)
+    print(a)
