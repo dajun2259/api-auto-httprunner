@@ -1,0 +1,13 @@
+@pytest.mark.parametrize(
+        "param",
+        Parameters(YamlProcess().htp_param("itil/event_management/event_list/add_event.yaml", 1)))
+    def test_start(self, param):
+        super().test_start(param)
+
+    config = (
+        Config("$configs")
+        .variables(**{})
+        .base_url("$baseurl")
+        .verify(False)
+        .export(*[])
+    )

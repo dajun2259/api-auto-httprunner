@@ -1,3 +1,0 @@
-.extract()
-                .with_jmespath("body.result", "result")
-                .validate()

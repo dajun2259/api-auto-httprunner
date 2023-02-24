@@ -1,0 +1,7 @@
+import pytest
+from httprunner import HttpRunner, Config, Step, RunRequest
+from httprunner import Parameters
+from common.setting import *
+from utils.data_processing.yaml_process import YamlProcess
+
+curPath = os.path.abspath(os.path.dirname(__file__))

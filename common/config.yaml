@@ -29,7 +29,7 @@ record_info:
   path: yanshi
 
 # 批量修改录制下来的接口请求信息路径
-updata_path: yanshi
+update_path: yanshi
 
 # 邮箱信息
 email:

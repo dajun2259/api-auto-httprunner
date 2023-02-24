@@ -124,12 +124,21 @@ def delete_all_files(file_path):
     :return:
     """
     try:
-        if os.path.isdir(file_path):
-            for f in os.listdir(file_path):
-                files = os.path.join(file_path, f)
-                os.remove(files)
-        else:
+        # 如果是文件直接删除
+        if os.path.isfile(file_path):
             os.remove(file_path)
+        # 递归删除目录下的文件
+        elif os.path.isdir(file_path):
+            for i in os.listdir(file_path):
+                j = os.path.join(file_path, i)
+                if os.path.isdir(j):
+                    delete_all_files(j)
+                else:
+                    os.remove(j)
+        # 删除空目录
+        if os.path.exists(file_path):
+            os.removedirs(file_path)
+
     except Exception:
         Logger().error(traceback.format_exc())
 
