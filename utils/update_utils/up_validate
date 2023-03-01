@@ -1,3 +1,2 @@
 .extract()
-                .with_jmespath()
-                .validate()
+            .validate()

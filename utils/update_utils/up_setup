@@ -1,6 +1,6 @@
 @pytest.mark.parametrize(
         "param",
-        Parameters(YamlProcess().htp_param("itil/event_management/event_list/add_event.yaml", 1)))
+        Parameters(YamlProcess().htp_param()))
     def test_start(self, param):
         super().test_start(param)
 
