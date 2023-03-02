@@ -6,16 +6,16 @@ import re
 import traceback
 
 from common.setting import Path
-from utils.file_utils.files_utils import *
-from utils.file_utils.yaml_utils import YamlUtils
-from utils.log_utils.loguru_utils import Logger
+from utils.file.files_utils import *
+from utils.file.yaml_utils import YamlUtils
+from utils.log.loguru_utils import Logger
 
 config_result = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 class UpData:
     def __init__(self):
-        self.cur_path = Path.root_path + "utils/update_utils/"
+        self.cur_path = Path.root_path + "utils/update/"
         self.urls = config_result['host']
         self.base_url = "$baseurl"
 

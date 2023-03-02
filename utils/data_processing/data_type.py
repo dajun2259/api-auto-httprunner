@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : data_type_utils.py
+# @File  : data_type.py
 # @Author: 尘心2259
 # @Date  : 2022/10/22 00:50
 # @Desc  :
@@ -10,7 +10,7 @@ import yaml
 import json
 
 from common.setting import Path
-from utils.log_utils.loguru_utils import Logger
+from utils.log.loguru_utils import Logger
 
 common_path = Path.common_path
 

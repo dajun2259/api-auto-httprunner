@@ -15,9 +15,9 @@ from typing import Any
 from dingtalkchatbot.chatbot import DingtalkChatbot, FeedLink
 
 from common.setting import Path
-from utils.allure_utils.allure_report_data import CaseCount
-from utils.file_utils.yaml_utils import YamlUtils
-from utils.log_utils.loguru_utils import Logger
+from utils.allure.allure_report_data import CaseCount
+from utils.file.yaml_utils import YamlUtils
+from utils.log.loguru_utils import Logger
 
 
 class DingTalkSendMsg:

@@ -8,9 +8,9 @@
 # @Description :
 import traceback
 
-from utils.data_processing.data_type_utils import list_deduplication
-from utils.file_utils.yaml_utils import YamlUtils
-from utils.log_utils.loguru_utils import Logger
+from utils.data_processing.data_type import list_deduplication
+from utils.file.yaml_utils import YamlUtils
+from utils.log.loguru_utils import Logger
 
 
 class YamlProcess(YamlUtils):

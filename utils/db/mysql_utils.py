@@ -9,8 +9,8 @@ import traceback
 import pymysql
 
 from common.setting import Path
-from utils.file_utils.yaml_utils import YamlUtils
-from utils.log_utils.loguru_utils import Logger
+from utils.file.yaml_utils import YamlUtils
+from utils.log.loguru_utils import Logger
 
 db_info = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 

@@ -8,8 +8,8 @@ from mitmproxy import ctx
 from mitmproxy import proxy, options
 from mitmproxy.tools.dump import DumpMaster
 
-from utils.log_utils.loguru_utils import Logger
-from utils.metersphere_utils.import_har import ImportHar
+from utils.log.loguru_utils import Logger
+from utils.metersphere.import_har import ImportHar
 
 
 def async_call(fn):

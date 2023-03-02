@@ -4,7 +4,7 @@ from pprint import pprint
 import yaml
 
 from common.setting import Path
-from utils.log_utils.loguru_utils import Logger
+from utils.log.loguru_utils import Logger
 
 
 class YamlUtils:

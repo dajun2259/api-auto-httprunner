@@ -7,9 +7,9 @@
 import os
 import traceback
 
-from utils.file_utils.case_auto_param import CaseAutoParam
-from utils.file_utils.yaml_utils import YamlUtils
-from utils.log_utils.loguru_utils import Logger
+from utils.file.case_auto_param import CaseAutoParam
+from utils.file.yaml_utils import YamlUtils
+from utils.log.loguru_utils import Logger
 
 
 def write_case(case_path, page):
@@ -68,7 +68,7 @@ class %s(HttpRunner):
                 **{}
             )   .with_json({})
                 .extract()
-                .validate()
+                .up_validate()
                 .assert_equal("status_code", "$code")
         ),
     ]

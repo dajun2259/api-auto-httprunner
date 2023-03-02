@@ -20,14 +20,14 @@
     ├── report                                 // 测试报告
     ├── testcase                               // 测试用例代码
     └── utils                                  // 工具类
-        ├── allure_utils                       // allure工具类
+        ├── allure                             // allure工具类
             ├── allure_report_data.py          // allure报告数据清洗
         ├── data_processing_utils              // 数据处理
             └── data_type_utils.py             // 数据类型转换
             └── yaml_process_utils.py          // 对读取yaml的数据清洗
-        ├── db_utils                           // 数据库工具类
+        ├── db                                 // 数据库工具类
             └── mysql_utils.py                 // mysql基本操作
-        ├── file_utils                         // 文件工具类
+        ├── file                               // 文件工具类
             ├── case_auto_param.py             // 获取用例模板参数
             ├── csv_utils.py                   // csv文件读取
             ├── file_zip.py                    // 文件压缩
@@ -36,21 +36,21 @@
             ├── txt_utils.py                   // txt文件的读写
             ├── yaml_py_utils.py               // yaml文件转换为测试用例代码py文件
             └── yaml_utils.py                  // yaml文件读写
-        ├── log_utils                          // 日志工具类
+        ├── log                                // 日志工具类
             ├── loguru_utils.py                // 日志封装
-        ├── metersphere_utils
+        ├── metersphere                        // metersphere平台
             ├── import_har.py                  // har文件导入metersphere平台生成接口用例
             └── record_import_har.py           // 接口录制
         ├── notify
             ├── dingtalk_utils.py              // 钉钉通知
             └── sendmail_utils.py              // 邮件通知
-        ├── other_utils                        // 日志工具类
+        ├── other                              // 其他
             ├── codes_utils.py                 // 加密解密
             └── time_utils.py                  // 邮件通知
-        ├── recording_utils                    // 接口录制
+        ├── recording                          // 接口录制
             ├── async_call_utils.py            // 异步处理装饰器
             └── mitmproxy_utils.py             // 录制封装
-        ├── update_utils                       // 数据更新
+        ├── update                             // 数据更新
             ├── up_data.py                     // 更新录制接口的信息
         └── requirements_utils.py              // 批量安装第三方库
     ├── .gitignore                             // git push不上传的目录、文件
