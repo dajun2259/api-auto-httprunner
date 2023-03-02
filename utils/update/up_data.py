@@ -33,7 +33,8 @@ class UpData:
         except Exception:
             Logger().error(traceback.format_exc())
 
-    def up_htp_data(self):
+    # 这个方法代码过于冗余，优化后可以参考up_htp_data()方法
+    def test(self):
         """
         该替换只适用于录制接口
         :return:
@@ -90,6 +91,41 @@ class UpData:
                 # 将最终的内容重新写入文件
                 self.write(all_dir, data_validate)
                 # print(data_validate)
+
+        except Exception:
+            Logger.error(traceback.format_exc())
+
+    def up_htp_data(self):
+        """
+        该替换只适用于录制接口
+        :return:
+        """
+        try:
+            regex_data = [
+                ['.*HttpRunner,.*', self.read(self.cur_path + 'up_head'), 0],  # 修改导入的库
+                ['config.*.', self.read(self.cur_path + 'up_setup'), 0],  # 修改config
+                ['RunRequest(.+)', self.read(self.cur_path + 'up_hook'), 1],  # 添加hook
+                [self.urls, self.base_url, 0],  # 替换baseurl
+                ['(\.validate\(\))', self.read(self.cur_path + 'up_validate'), 0]  # 替换validate()
+
+            ]
+
+            case_path = Path.case_path + config_result['update_path']
+            path_dir = get_test_py_path(case_path)
+
+            for all_dir in path_dir:
+                # 读取文件内容
+                read_content = self.read(all_dir)
+
+                '''
+                 没有该条件判断会报错。如果文件数据已经更新了一次，再次更新后报错，因为更新后的数据，正则表达式已经匹配不到了。
+                 所以加判断条件:  如果self.base_url不存在说明还是旧数据，正则是可以匹配到的
+                '''
+                if self.base_url not in read_content:
+                    for i in regex_data:
+                        get_regex_data = re.findall(i[0], read_content)[i[2]]
+                        read_content = read_content.replace(get_regex_data, i[1])
+                self.write(all_dir, read_content)
 
         except Exception:
             Logger.error(traceback.format_exc())

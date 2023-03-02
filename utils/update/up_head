@@ -1,5 +1,5 @@
 import pytest
-from httprunner import HttpRunner, Config, Step, RunRequest
+from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
 from httprunner import Parameters
 from common.setting import *
 from utils.data_processing.yaml_process import YamlProcess
