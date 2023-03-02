@@ -31,6 +31,21 @@ def get_all_files(file_path):
         Logger().error(traceback.format_exc())
 
 
+def get_file_name(file_path):
+    """
+    获取文件的名称
+    :param file_path: 文件路径
+    :return:
+    """
+    try:
+        if "/" in file_path:
+            return file_path.split("/")[-1]
+        elif "\\" in file_path:
+            return file_path.split("\\")[-1]
+    except Exception:
+        Logger().error(traceback.format_exc())
+
+
 def creat_path(dir_name, file_name=None):
     """
     创建多级目录+文件
@@ -51,18 +66,22 @@ def creat_path(dir_name, file_name=None):
 
 def get_test_py_name(filepath):
     """
-    获取testcase目录下的test_开头的.py文件名称
+    获取testcase目录下的test_开头或_test结尾.py文件名称
     :param filepath:
     :return:
     """
     try:
         file = get_all_files(filepath)
-        p = re.compile(r"/(test_.*?\.py$)")
 
         files = []
         for i in file:
-            for j in p.findall(i):
-                files.append(j)
+            split_i = str(i.split("/")[-1])
+            if split_i.startswith("test_") and split_i.endswith(".py"):
+                if split_i not in files:
+                    files.append(split_i)
+            if split_i.endswith("_test.py"):
+                if split_i not in files:
+                    files.append(split_i)
         return files
     except Exception:
         Logger().error(traceback.format_exc())
@@ -70,7 +89,7 @@ def get_test_py_name(filepath):
 
 def get_test_py_path(filepath):
     """
-    获取testcase目录下的test_开头的.py文件的绝对路径，用例批量跑testcase文件
+    获取testcase目录下的test_开头或_test结尾的.py文件的绝对路径，用例批量跑testcase文件
     :param filepath:
     :return:
     """
@@ -85,7 +104,11 @@ def get_test_py_path(filepath):
             test_file = os.path.basename(file)  # 返回path最后的文件名
             if test_file.startswith("test_") and test_file.endswith(".py"):
                 # new_files.append('/'.join(file))
-                new_files.append(file)
+                if file not in new_files:
+                    new_files.append(file)
+            if test_file.endswith("_test.py"):
+                if file not in new_files:
+                    new_files.append(file)
         return new_files
     except Exception:
         Logger().error(traceback.format_exc())
@@ -143,21 +166,6 @@ def delete_all_files(file_path):
         Logger().error(traceback.format_exc())
 
 
-def get_file_name(file_path):
-    """
-    获取文件的名称
-    :param file_path: 文件路径
-    :return:
-    """
-    try:
-        if "/" in file_path:
-            return file_path.split("/")[-1]
-        elif "\\" in file_path:
-            return file_path.split("\\")[-1]
-    except Exception:
-        Logger().error(traceback.format_exc())
-
-
 def file_capitalize(file_path):
     """
     需求：根据文件名命名类名格式
@@ -193,6 +201,5 @@ def file_capitalize(file_path):
 
 
 if __name__ == '__main__':
-    a = creat_init_py(
-        "/Users/cx2259/project/hengshi/api_auto_test/data/a/b")
+    a = get_test_py_name("/Users/cx2259/project/hengshi/api_auto_test/testcases/yanshi")
     print(a)

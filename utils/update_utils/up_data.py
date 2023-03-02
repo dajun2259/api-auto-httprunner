@@ -45,59 +45,51 @@ class UpData:
             new_validate = self.read(self.cur_path + 'up_validate')
 
             case_path = Path.case_path + config_result['update_path']
-            path_dir = get_all_files(case_path)
+            path_dir = get_test_py_path(case_path)
 
-            # 存取读取的文件内容
-            read_content = ''
-            # 全局路径
-            sub_dir = ''
             for all_dir in path_dir:
-                if all_dir.endswith("_test.py"):
-                    sub_dir = os.path.join(case_path, all_dir)
-                    # 读取文件内容
-                    read_content = self.read(sub_dir)
+                # 读取文件内容
+                read_content = self.read(all_dir)
+
+                # 修改导入的库
+                get_httprunner = re.findall(".*HttpRunner,.*", read_content)[0]
+                if new_head in read_content:
+                    data_import = read_content
+                else:
+                    data_import = read_content.replace(get_httprunner, new_head)
+
+                # 修改config
+                get_config = re.findall('config.*.', data_import)[0]
+                if new_up in read_content:
+                    data_config = read_content
+                else:
+                    data_config = data_import.replace(get_config, new_up)
+
+                # 添加hook
+                get_runrequest = re.findall('RunRequest(.+)', data_config)[0]
+                if new_hook in read_content:
+                    data_hook = read_content
+                else:
+                    data_hook = data_config.replace(get_runrequest, get_runrequest + new_hook)
+
+                # 替换baseurl
+                get_urls = re.findall(self.urls, data_hook)[0]
+                if self.base_url in read_content:
+                    data_url = read_content
+                else:
+                    data_url = data_hook.replace(get_urls, self.base_url)
+
+                # 替换validate()
+                get_validate = re.findall('(\.validate\(\))', data_import)[0]
+                if new_validate in read_content:
+                    data_validate = read_content
 
                 else:
-                    raise f"{all_dir}不是_test.py结尾，不能修改信息"
-            # 修改导入的库
-            get_httprunner = re.findall(".*HttpRunner,.*", read_content)[0]
-            if new_head in read_content:
-                data_import = read_content
-            else:
-                data_import = read_content.replace(get_httprunner, new_head)
+                    data_validate = data_url.replace(get_validate, new_validate)
 
-            # 修改config
-            get_config = re.findall('config.*.', data_import)[0]
-            if new_up in read_content:
-                data_config = read_content
-            else:
-                data_config = data_import.replace(get_config, new_up)
-
-            # 添加hook
-            get_runrequest = re.findall('RunRequest(.+)', data_config)[0]
-            if new_hook in read_content:
-                data_hook = read_content
-            else:
-                data_hook = data_config.replace(get_runrequest, get_runrequest + new_hook)
-
-            # 替换baseurl
-            get_urls = re.findall(self.urls, data_hook)[0]
-            if self.base_url in read_content:
-                data_url = read_content
-            else:
-                data_url = data_hook.replace(get_urls, self.base_url)
-
-            # 替换validate()
-            get_validate = re.findall('(\.validate\(\))', data_import)[0]
-            if new_validate in read_content:
-                data_validate = read_content
-
-            else:
-                data_validate = data_url.replace(get_validate, new_validate)
-
-            # 将最终的内容重新写入文件
-            self.write(sub_dir, data_validate)
-            # print(data_validate)
+                # 将最终的内容重新写入文件
+                self.write(all_dir, data_validate)
+                # print(data_validate)
 
         except Exception:
             Logger.error(traceback.format_exc())
