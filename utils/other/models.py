@@ -205,7 +205,7 @@ class Config(BaseModel):
     env: Text
     tester_name: Text
     notification_type: int = 0
-    excel_report: bool
+    # excel_report: bool
     ding_talk: "DingTalk"
     mysql_db: "MySqlDB"
     mirror_source: Text

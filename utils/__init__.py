@@ -1,6 +1,6 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @File  : __init__.py.py
-# @Author: 尘心2259
-# @Date  : 2022/7/13 18:28
-# @Desc  :
+from common.setting import Path
+from utils.other.models import Config
+from utils.file.yaml_utils import YamlUtils
+
+_data = YamlUtils().read_yaml(Path.common_path + "config.yaml")
+config = Config(**_data)

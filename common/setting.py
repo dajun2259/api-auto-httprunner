@@ -5,6 +5,7 @@
 # @Date  : 2022/6/1 00:36
 # @Desc  :
 import os
+from typing import Text
 
 
 class Path:
@@ -38,5 +39,18 @@ class Path:
     attach_path = os.path.join(root_path, 'attach' + _SLASH)
 
 
+def ensure_path_sep(path: Text) -> Text:
+    """兼容 windows 和 linux 不同环境的操作系统路径 """
+    root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + os.sep
+
+    if "/" in path:
+        path = os.sep.join(path.split("/"))
+
+    if "\\" in path:
+        path = os.sep.join(path.split("\\"))
+
+    return root_path + path
+
+
 if __name__ == '__main__':
-    print(Path.common_path)
+    print(ensure_path_sep("har"))

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time   : 2022/3/28 15:30
-# @Author : 余少琪
+# @Author :
 """
 钉钉通知封装
 """
@@ -12,31 +12,21 @@ import time
 import urllib.parse
 from typing import Any, Text
 from dingtalkchatbot.chatbot import DingtalkChatbot, FeedLink
-
-from common.setting import Path
-from utils.file.yaml_utils import YamlUtils
 from utils.other.get_local_ip import get_host_ip
-from utils.allure.allure_report_data import AllureFileClean
-from utils.other.models import TestMetrics
+from utils.allure.allure_report_data import AllureFileClean, TestMetrics
+from utils import config
 
-config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 class DingTalkSendMsg:
     """ 发送钉钉通知 """
-
     def __init__(self, metrics: TestMetrics):
         self.metrics = metrics
         self.timeStamp = str(round(time.time() * 1000))
 
-        # 从yaml文件中获取钉钉配置信息
-        self.get_dingtalk = config['ding_talk']
-        self.project_name = config['project_name']
-        self.tester_name = config['tester_name']
-
     def xiao_ding(self):
         sign = self.get_sign()
         # 从yaml文件中获取钉钉配置信息
-        webhook = self.get_dingtalk["webhook"] + "&timestamp=" + self.timeStamp + "&sign=" + sign
+        webhook = config.ding_talk.webhook + "&timestamp=" + self.timeStamp + "&sign=" + sign
         return DingtalkChatbot(webhook)
 
     def get_sign(self) -> Text:
@@ -44,9 +34,9 @@ class DingTalkSendMsg:
         根据时间戳 + "sign" 生成密钥
         :return:
         """
-        string_to_sign = f'{self.timeStamp}\n{self.get_dingtalk["secret"]}'.encode('utf-8')
+        string_to_sign = f'{self.timeStamp}\n{config.ding_talk.secret}'.encode('utf-8')
         hmac_code = hmac.new(
-            self.get_dingtalk["secret"].encode('utf-8'),
+            config.ding_talk.secret.encode('utf-8'),
             string_to_sign,
             digestmod=hashlib.sha256).digest()
 
@@ -84,11 +74,11 @@ class DingTalkSendMsg:
         :return:
         """
         self.xiao_ding().send_link(
-            title=title,
-            text=text,
-            message_url=message_url,
-            pic_url=pic_url
-        )
+                title=title,
+                text=text,
+                message_url=message_url,
+                pic_url=pic_url
+            )
 
     def send_markdown(
             self,
@@ -138,10 +128,10 @@ class DingTalkSendMsg:
         is_at_all = False
         if self.metrics.failed + self.metrics.broken > 0:
             is_at_all = True
-        text = f"#### {self.project_name}自动化通知  " \
-               f"\n\n>Python脚本任务: {self.project_name}" \
+        text = f"#### {config.project_name}自动化通知  " \
+               f"\n\n>Python脚本任务: {config.project_name}" \
                f"\n\n>环境: TEST\n\n>" \
-               f"执行人: {self.tester_name}" \
+               f"执行人: {config.tester_name}" \
                f"\n\n>执行结果: {self.metrics.pass_rate}% " \
                f"\n\n>总用例数: {self.metrics.total} " \
                f"\n\n>成功用例数: {self.metrics.passed}" \
