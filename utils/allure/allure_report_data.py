@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
 # @Time   : 2022/3/28 15:44
-# @Author : 尘心
+# @Author :
+描述: 收集 allure 报告
+"""
 
 import json
-import traceback
-
-from common.setting import Path
+from typing import List, Text
+from common.setting import ensure_path_sep
 from utils.file.files_utils import get_all_files
-from utils.log.loguru_utils import Logger
 from utils.other.models import TestMetrics
 
 
@@ -16,57 +17,41 @@ class AllureFileClean:
     """allure 报告数据清洗，提取业务需要得数据"""
 
     @classmethod
-    def get_testcases(cls) -> list:
-        """
+    def get_testcases(cls) -> List:
+        """ 获取所有 allure 报告中执行用例的情况"""
+        # 将所有数据都收集到files中
+        files = []
+        for i in get_all_files(ensure_path_sep("\\report\\html\\data\\test-cases")):
+            with open(i, 'r', encoding='utf-8') as file:
+                date = json.load(file)
+                files.append(date)
+        return files
 
-        :return:
-        """
-        try:
-            """ 获取所有 allure 报告中执行用例的情况"""
-            # 将所有数据都收集到files中
-            files = []
-            for i in get_all_files(Path.report_path + 'html/data/test-cases'):
-                with open(i, 'r', encoding='utf-8') as fp:
-                    date = json.load(fp)
-                    files.append(date)
-            return files
-        except Exception:
-            Logger().error(traceback.format_exc())
-
-    def get_failed_case(self) -> list:
+    def get_failed_case(self) -> List:
         """ 获取到所有失败的用例标题和用例代码路径"""
         error_case = []
+        for i in self.get_testcases():
+            if i['status'] == 'failed' or i['status'] == 'broken':
+                error_case.append((i['name'], i['fullName']))
+        return error_case
 
-        try:
-            for i in self.get_testcases():
-                if i['status'] == 'failed' or i['status'] == 'broken':
-                    error_case.append((i['name'], i['fullName']))
-            return error_case
-        except Exception:
-            Logger().error(traceback.format_exc())
-
-    def get_failed_cases_detail(self) -> str:
+    def get_failed_cases_detail(self) -> Text:
         """ 返回所有失败的测试用例相关内容 """
-
-        try:
-            """ 返回所有失败的测试用例相关内容 """
-            date = self.get_failed_case()
-            values = ""
-            # 判断有失败用例，则返回内容
-            if len(date) >= 1:
-                values = "失败用例:\n"
-                values += "        **********************************\n"
-                for i in date:
-                    values += "        " + i[0] + ":" + i[1] + "\n"
-            return values
-        except Exception:
-            Logger().error(traceback.format_exc())
+        date = self.get_failed_case()
+        values = ""
+        # 判断有失败用例，则返回内容
+        if len(date) >= 1:
+            values = "失败用例:\n"
+            values += "        **********************************\n"
+            for i in date:
+                values += "        " + i[0] + ":" + i[1] + "\n"
+        return values
 
     @classmethod
     def get_case_count(cls) -> "TestMetrics":
         """ 统计用例数量 """
         try:
-            file_name = Path.report_path + 'html/widgets/summary.json'
+            file_name = ensure_path_sep("\\report\\html\\widgets\\summary.json")
             with open(file_name, 'r', encoding='utf-8') as file:
                 data = json.load(file)
             _case_count = data['statistic']
@@ -89,6 +74,8 @@ class AllureFileClean:
             raise FileNotFoundError(
                 "程序中检查到您未生成allure报告，"
                 "通常可能导致的原因是allure环境未配置正确，"
+                "详情可查看如下博客内容："
+                "https://blog.csdn.net/weixin_43865008/article/details/124332793"
             ) from exc
 
 
