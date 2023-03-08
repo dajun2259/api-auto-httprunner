@@ -1,20 +1,20 @@
 [ {
-  "uid" : "3bbd97ab52f6c563",
+  "uid" : "846cb579baa8635c",
   "name" : "开发环境",
   "time" : {
-    "start" : 1678262768639,
-    "stop" : 1678262769420,
-    "duration" : 781
+    "start" : 1678263553276,
+    "stop" : 1678263554121,
+    "duration" : 845
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c366095c6039ca75",
+  "uid" : "781a0e6f1603c1b",
   "name" : "开发环境",
   "time" : {
-    "start" : 1678262769422,
-    "stop" : 1678262770215,
-    "duration" : 793
+    "start" : 1678263554124,
+    "stop" : 1678263554840,
+    "duration" : 716
   },
   "status" : "passed",
   "severity" : "normal"

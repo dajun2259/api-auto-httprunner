@@ -17,7 +17,6 @@ from utils.other.models import NotificationType
 from utils import config
 
 
-
 def run(case_dir):
     """
 
@@ -46,7 +45,6 @@ def run(case_dir):
                 )
 
     os.system(r"allure generate ./report/tmp -o ./report/html --clean")
-    # os.system(f"allure serve ./report/tmp  -p 811") # 执行完自动打开报告，指定固定端口
 
     allure_data = AllureFileClean().get_case_count()
     notification_mapping = {
@@ -58,6 +56,9 @@ def run(case_dir):
 
     if config.notification_type != NotificationType.DEFAULT.value:
         notification_mapping.get(config.notification_type)()
+
+    # 程序运行之后，自动启动报告，如果不想启动报告，可注释这段代码
+    # os.system(f"allure serve ./report/tmp -h 127.0.0.1 -p 9999")
 
 
 if __name__ == '__main__':

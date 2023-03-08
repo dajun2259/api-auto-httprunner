@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Mar 08 16:06:08 CST 2023","Wed Mar 08 16:06:09 CST 2023","781","testcases.collect","test_collect_add_site","TestCaseCollectAddSite","","","开发环境","TestCase ID: 1b176e79-aeb3-48b3-b7c1-60b81ebd781b"
-"passed","Wed Mar 08 16:06:09 CST 2023","Wed Mar 08 16:06:10 CST 2023","793","testcases.collect","test_collect_add_site","TestCaseCollectAddSite","","","开发环境","TestCase ID: 2e45e40d-79a3-431b-a6a9-2661259d58f3"
+"passed","Wed Mar 08 16:19:13 CST 2023","Wed Mar 08 16:19:14 CST 2023","845","testcases.collect","test_collect_add_site","TestCaseCollectAddSite","","","开发环境","TestCase ID: 59571a0f-3ab1-46d4-a1a2-4da3fb91a8b2"
+"passed","Wed Mar 08 16:19:14 CST 2023","Wed Mar 08 16:19:14 CST 2023","716","testcases.collect","test_collect_add_site","TestCaseCollectAddSite","","","开发环境","TestCase ID: d7eba628-56e3-45ca-8901-0719b543d03b"
