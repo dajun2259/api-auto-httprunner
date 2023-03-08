@@ -8,11 +8,14 @@ import os
 import pytest
 from common.setting import Path
 from utils.allure.allure_report_data import AllureFileClean
-from utils.file.yaml_utils import YamlUtils
 from utils.log.loguru_utils import Logger
-from utils.notify.dingtalk_utils import DingTalkSendMsg
+from utils.notify.dingtalk import DingTalkSendMsg
+from utils.notify.lark import FeiShuTalkChatBot
+from utils.notify.send_mail import SendEmail
+from utils.notify.wechat_send import WeChatSend
+from utils.other.models import NotificationType
+from utils import config
 
-config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
 
 def run(case_dir):
@@ -45,9 +48,17 @@ def run(case_dir):
     os.system(r"allure generate ./report/tmp -o ./report/html --clean")
     # os.system(f"allure serve ./report/tmp  -p 811") # 执行完自动打开报告，指定固定端口
 
-    # 发送钉钉通知
-    # DingTalkSendMsg(AllureFileClean().get_case_count()).send_ding_notification()
+    allure_data = AllureFileClean().get_case_count()
+    notification_mapping = {
+        NotificationType.DING_TALK.value: DingTalkSendMsg(allure_data).send_ding_notification,
+        NotificationType.WECHAT.value: WeChatSend(allure_data).send_wechat_notification,
+        NotificationType.EMAIL.value: SendEmail(allure_data).send_main,
+        NotificationType.FEI_SHU.value: FeiShuTalkChatBot(allure_data).post
+    }
+
+    if config.notification_type != NotificationType.DEFAULT.value:
+        notification_mapping.get(config.notification_type)()
 
 
 if __name__ == '__main__':
-    run("collect")
+    run("collect/test_collect_add_site.py")

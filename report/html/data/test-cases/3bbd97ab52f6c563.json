@@ -1,15 +1,15 @@
 {
-  "uid" : "e7c0fb2ce1095b15",
+  "uid" : "3bbd97ab52f6c563",
   "name" : "开发环境",
   "fullName" : "testcases.collect.test_collect_add_site.TestCaseCollectAddSite#test_start",
-  "historyId" : "d8ca51677fa2f208b451cf1798c26ac4",
+  "historyId" : "3aead6fcd14905c869bab0622cf19b20",
   "time" : {
-    "start" : 1678245655498,
-    "stop" : 1678245656173,
-    "duration" : 675
+    "start" : 1678262768639,
+    "stop" : 1678262769420,
+    "duration" : 781
   },
-  "description" : "TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd",
-  "descriptionHtml" : "<p>TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd</p>\n",
+  "description" : "TestCase ID: 1b176e79-aeb3-48b3-b7c1-60b81ebd781b",
+  "descriptionHtml" : "<p>TestCase ID: 1b176e79-aeb3-48b3-b7c1-60b81ebd781b</p>\n",
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
@@ -20,44 +20,44 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1678245654647,
-      "stop" : 1678245654666,
-      "duration" : 19
+      "start" : 1678262768618,
+      "stop" : 1678262768638,
+      "duration" : 20
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
-    "description" : "TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd",
+    "description" : "TestCase ID: 1b176e79-aeb3-48b3-b7c1-60b81ebd781b",
     "status" : "passed",
     "steps" : [ {
       "name" : "step: 开发平台-收藏模块-添加网站",
       "time" : {
-        "start" : 1678245655507,
-        "stop" : 1678245656173,
-        "duration" : 666
+        "start" : 1678262768643,
+        "stop" : 1678262769419,
+        "duration" : 776
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : true,
     "stepsCount" : 1,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "shouldDisplayMessage" : false
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -74,7 +74,7 @@
     "value" : "localhost"
   }, {
     "name" : "thread",
-    "value" : "37520-MainThread"
+    "value" : "44912-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -90,7 +90,7 @@
   } ],
   "parameters" : [ {
     "name" : "param",
-    "value" : "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}"
+    "value" : "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}"
   } ],
   "links" : [ ],
   "hidden" : false,
@@ -101,6 +101,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "e7c0fb2ce1095b15.json",
-  "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
+  "source" : "3bbd97ab52f6c563.json",
+  "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
 }

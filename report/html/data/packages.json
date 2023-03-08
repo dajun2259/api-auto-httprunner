@@ -5,13 +5,13 @@
     "name" : "testcases.collect.test_collect_add_site",
     "children" : [ {
       "name" : "开发环境",
-      "uid" : "3155534d81f7d208",
+      "uid" : "3bbd97ab52f6c563",
       "parentUid" : "5a3d0b2f8491a4406ec15d34354584ca",
       "status" : "passed",
       "time" : {
-        "start" : 1678245654667,
-        "stop" : 1678245655494,
-        "duration" : 827
+        "start" : 1678262768639,
+        "stop" : 1678262769420,
+        "duration" : 781
       },
       "flaky" : false,
       "newFailed" : false,
@@ -22,13 +22,13 @@
       "parameters" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
     }, {
       "name" : "开发环境",
-      "uid" : "e7c0fb2ce1095b15",
+      "uid" : "c366095c6039ca75",
       "parentUid" : "5a3d0b2f8491a4406ec15d34354584ca",
       "status" : "passed",
       "time" : {
-        "start" : 1678245655498,
-        "stop" : 1678245656173,
-        "duration" : 675
+        "start" : 1678262769422,
+        "stop" : 1678262770215,
+        "duration" : 793
       },
       "flaky" : false,
       "newFailed" : false,
