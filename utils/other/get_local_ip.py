@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 # @Time    : 2022/5/10 18:54
-# @Author  : 余少琪
-# @Email   : 1603453211@qq.com
+# @Author  :
+# @Email   :
 # @File    :
 # @describe:
 """
@@ -25,3 +25,8 @@ def get_host_ip():
         _s.close()
 
     return l_host
+
+
+if __name__ == '__main__':
+    a = get_host_ip()
+    print(a)
