@@ -43,8 +43,8 @@ email:
 
 # 钉钉机器人信息
 ding_talk:
-  webhook: # 需要创建钉钉机器人后获取，自行百度吧
-  secret:  # 需要创建钉钉机器人后获取，自行百度吧
+  webhook: https://oapi.dingtalk.com/robot/send?access_token=5c97181a211910abaf1549da7717136582dd06652b74ab924c51f47dbaf02a39
+  secret: SEC44c1e95ca63dd50a46aac2db32a5a8fbea732f740f4c8cd9a278188362fb3d34
 
 # 数据库信息
 mysql_db:

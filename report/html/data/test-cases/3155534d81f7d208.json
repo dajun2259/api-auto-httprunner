@@ -1,15 +1,15 @@
 {
-  "uid" : "9d26e8aa2c8a7bd8",
+  "uid" : "3155534d81f7d208",
   "name" : "开发环境",
   "fullName" : "testcases.collect.test_collect_add_site.TestCaseCollectAddSite#test_start",
   "historyId" : "3aead6fcd14905c869bab0622cf19b20",
   "time" : {
-    "start" : 1678245398165,
-    "stop" : 1678245398897,
-    "duration" : 732
+    "start" : 1678245654667,
+    "stop" : 1678245655494,
+    "duration" : 827
   },
-  "description" : "TestCase ID: cfd3bc72-091c-4b91-9225-eee4ac2bcce4",
-  "descriptionHtml" : "<p>TestCase ID: cfd3bc72-091c-4b91-9225-eee4ac2bcce4</p>\n",
+  "description" : "TestCase ID: 7af9370e-2aef-434a-9d3e-0a3ecb802f44",
+  "descriptionHtml" : "<p>TestCase ID: 7af9370e-2aef-434a-9d3e-0a3ecb802f44</p>\n",
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
@@ -20,8 +20,8 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1678245398146,
-      "stop" : 1678245398165,
+      "start" : 1678245654647,
+      "stop" : 1678245654666,
       "duration" : 19
     },
     "status" : "passed",
@@ -34,14 +34,14 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "description" : "TestCase ID: cfd3bc72-091c-4b91-9225-eee4ac2bcce4",
+    "description" : "TestCase ID: 7af9370e-2aef-434a-9d3e-0a3ecb802f44",
     "status" : "passed",
     "steps" : [ {
       "name" : "step: 开发平台-收藏模块-添加网站",
       "time" : {
-        "start" : 1678245398169,
-        "stop" : 1678245398896,
-        "duration" : 727
+        "start" : 1678245654671,
+        "stop" : 1678245655493,
+        "duration" : 822
       },
       "status" : "passed",
       "steps" : [ ],
@@ -74,7 +74,7 @@
     "value" : "localhost"
   }, {
     "name" : "thread",
-    "value" : "37238-MainThread"
+    "value" : "37520-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -101,6 +101,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "9d26e8aa2c8a7bd8.json",
+  "source" : "3155534d81f7d208.json",
   "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
 }

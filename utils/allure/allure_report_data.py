@@ -9,6 +9,7 @@ import traceback
 from common.setting import Path
 from utils.file.files_utils import get_all_files
 from utils.log.loguru_utils import Logger
+from utils.other.models import TestMetrics
 
 
 class AllureFileClean:
@@ -24,7 +25,7 @@ class AllureFileClean:
             """ 获取所有 allure 报告中执行用例的情况"""
             # 将所有数据都收集到files中
             files = []
-            for i in get_all_files(Path.report_path + 'html/data/yanshi-cases'):
+            for i in get_all_files(Path.report_path + 'html/data/test-cases'):
                 with open(i, 'r', encoding='utf-8') as fp:
                     date = json.load(fp)
                     files.append(date)
@@ -48,76 +49,48 @@ class AllureFileClean:
         """ 返回所有失败的测试用例相关内容 """
 
         try:
+            """ 返回所有失败的测试用例相关内容 """
             date = self.get_failed_case()
+            values = ""
             # 判断有失败用例，则返回内容
             if len(date) >= 1:
                 values = "失败用例:\n"
                 values += "        **********************************\n"
                 for i in date:
                     values += "        " + i[0] + ":" + i[1] + "\n"
-                return values
-            else:
-                # 如果没有失败用例，则返回False
-                return ""
+            return values
         except Exception:
             Logger().error(traceback.format_exc())
 
     @classmethod
-    def get_case_count(cls) -> dict:
+    def get_case_count(cls) -> "TestMetrics":
         """ 统计用例数量 """
-
         try:
-            fil_name = Path.report_path + 'html/widgets/summary.json'
-            with open(fil_name, 'r', encoding='utf-8') as fp:
-                date = json.load(fp)
-            return date
-        except Exception:
-            Logger().error(traceback.format_exc())
-
-
-class CaseCount:
-    """
-        pass
-    """
-    def __init__(self):
-        self.AllureData = AllureFileClean()
-
-    def pass_count(self) -> int:
-        """用例成功数"""
-        return self.AllureData.get_case_count()['statistic']['passed']
-
-    def failed_count(self) -> int:
-        """用例失败数"""
-        return self.AllureData.get_case_count()['statistic']['failed']
-
-    def broken_count(self) -> int:
-        """用例异常数"""
-        return self.AllureData.get_case_count()['statistic']['broken']
-
-    def skipped_count(self) -> int:
-        """用例跳过数"""
-        return self.AllureData.get_case_count()['statistic']['skipped']
-
-    def total_count(self) -> int:
-        """用例总数"""
-        return self.AllureData.get_case_count()['statistic']['total']
-
-    def pass_rate(self) -> float:
-        """用例成功率"""
-        # 四舍五入，保留2位小数
-        try:
-            pass_rate = round(self.pass_count() / self.total_count() * 100, 2)
-            return pass_rate
-        except ZeroDivisionError:
-            Logger().error(traceback.format_exc())
-            return 0.00
-
-    def get_times(self):
-        """用例执行时长"""
-        run_time = round(self.AllureData.get_case_count()['time']['duration'] / 1000 / 60, 2)
-        return f"{run_time}min"
+            file_name = Path.report_path + 'html/widgets/summary.json'
+            with open(file_name, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+            _case_count = data['statistic']
+            _time = data['time']
+            keep_keys = {"passed", "failed", "broken", "skipped", "total"}
+            run_case_data = {k: v for k, v in data['statistic'].items() if k in keep_keys}
+            # 判断运行用例总数大于0
+            if _case_count["total"] > 0:
+                # 计算用例成功率
+                run_case_data["pass_rate"] = round(
+                    (_case_count["passed"] + _case_count["skipped"]) / _case_count["total"] * 100, 2
+                )
+            else:
+                # 如果未运行用例，则成功率为 0.0
+                run_case_data["pass_rate"] = 0.0
+            # 收集用例运行时长
+            run_case_data['time'] = _time if run_case_data['total'] == 0 else round(_time['duration'] / 1000, 2)
+            return TestMetrics(**run_case_data)
+        except FileNotFoundError as exc:
+            raise FileNotFoundError(
+                "程序中检查到您未生成allure报告，"
+                "通常可能导致的原因是allure环境未配置正确，"
+            ) from exc
 
 
 if __name__ == '__main__':
-    a = AllureFileClean().get_case_count()
-    print(a)
+    AllureFileClean().get_case_count()

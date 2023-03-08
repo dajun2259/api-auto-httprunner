@@ -1,15 +1,15 @@
 {
-  "uid" : "48f56e16a68b5655",
+  "uid" : "e7c0fb2ce1095b15",
   "name" : "开发环境",
   "fullName" : "testcases.collect.test_collect_add_site.TestCaseCollectAddSite#test_start",
   "historyId" : "d8ca51677fa2f208b451cf1798c26ac4",
   "time" : {
-    "start" : 1678245398901,
-    "stop" : 1678245399691,
-    "duration" : 790
+    "start" : 1678245655498,
+    "stop" : 1678245656173,
+    "duration" : 675
   },
-  "description" : "TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725",
-  "descriptionHtml" : "<p>TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725</p>\n",
+  "description" : "TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd",
+  "descriptionHtml" : "<p>TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd</p>\n",
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
@@ -20,8 +20,8 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1678245398146,
-      "stop" : 1678245398165,
+      "start" : 1678245654647,
+      "stop" : 1678245654666,
       "duration" : 19
     },
     "status" : "passed",
@@ -34,14 +34,14 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "description" : "TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725",
+    "description" : "TestCase ID: 7aecc6b2-1314-4664-97bf-5c7501ef9ccd",
     "status" : "passed",
     "steps" : [ {
       "name" : "step: 开发平台-收藏模块-添加网站",
       "time" : {
-        "start" : 1678245398910,
-        "stop" : 1678245399691,
-        "duration" : 781
+        "start" : 1678245655507,
+        "stop" : 1678245656173,
+        "duration" : 666
       },
       "status" : "passed",
       "steps" : [ ],
@@ -74,7 +74,7 @@
     "value" : "localhost"
   }, {
     "name" : "thread",
-    "value" : "37238-MainThread"
+    "value" : "37520-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -101,6 +101,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "48f56e16a68b5655.json",
+  "source" : "e7c0fb2ce1095b15.json",
   "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
 }

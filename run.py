@@ -7,8 +7,10 @@
 import os
 import pytest
 from common.setting import Path
+from utils.allure.allure_report_data import AllureFileClean
 from utils.file.yaml_utils import YamlUtils
 from utils.log.loguru_utils import Logger
+from utils.notify.dingtalk_utils import DingTalkSendMsg
 
 config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 
@@ -44,7 +46,7 @@ def run(case_dir):
     # os.system(f"allure serve ./report/tmp  -p 811") # 执行完自动打开报告，指定固定端口
 
     # 发送钉钉通知
-    # DingTalkSendMsg().send_ding_notification()
+    # DingTalkSendMsg(AllureFileClean().get_case_count()).send_ding_notification()
 
 
 if __name__ == '__main__':

@@ -4,33 +4,16 @@
   "children" : [ {
     "name" : "localhost",
     "children" : [ {
-      "name" : "37238-MainThread",
+      "name" : "37520-MainThread",
       "children" : [ {
         "name" : "开发环境",
-        "uid" : "9d26e8aa2c8a7bd8",
-        "parentUid" : "a735a4ac69bc4d6ac3386f4836aad125",
+        "uid" : "e7c0fb2ce1095b15",
+        "parentUid" : "a7bde13673bdb86b79123651d3364ca0",
         "status" : "passed",
         "time" : {
-          "start" : 1678245398165,
-          "stop" : 1678245398897,
-          "duration" : 732
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
-      }, {
-        "name" : "开发环境",
-        "uid" : "48f56e16a68b5655",
-        "parentUid" : "a735a4ac69bc4d6ac3386f4836aad125",
-        "status" : "passed",
-        "time" : {
-          "start" : 1678245398901,
-          "stop" : 1678245399691,
-          "duration" : 790
+          "start" : 1678245655498,
+          "stop" : 1678245656173,
+          "duration" : 675
         },
         "flaky" : false,
         "newFailed" : false,
@@ -39,8 +22,25 @@
         "retriesCount" : 0,
         "retriesStatusChange" : false,
         "parameters" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
+      }, {
+        "name" : "开发环境",
+        "uid" : "3155534d81f7d208",
+        "parentUid" : "a7bde13673bdb86b79123651d3364ca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678245654667,
+          "stop" : 1678245655494,
+          "duration" : 827
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
       } ],
-      "uid" : "a735a4ac69bc4d6ac3386f4836aad125"
+      "uid" : "a7bde13673bdb86b79123651d3364ca0"
     } ],
     "uid" : "be30f600e0434356d35178c8efd2dc81"
   } ]
