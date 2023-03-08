@@ -1,7 +1,7 @@
 import time
 from httprunner import __version__
 from common.setting import Path
-from utils.file_utils.yaml_utils import YamlUtils
+from utils.file.yaml_utils import YamlUtils
 from utils.login import login
 
 config = YamlUtils().read_yaml(Path.common_path + "config.yaml")

@@ -4,18 +4,18 @@
   "children" : [ {
     "name" : "testcases.collect",
     "children" : [ {
-      "name" : "collect_add_site_test",
+      "name" : "test_collect_add_site",
       "children" : [ {
         "name" : "TestCaseCollectAddSite",
         "children" : [ {
           "name" : "开发环境",
-          "uid" : "37bb735d1c26e9ec",
-          "parentUid" : "7e1ee4adc76d7bd97b0689ea367cce70",
+          "uid" : "9d26e8aa2c8a7bd8",
+          "parentUid" : "78fd7bd965d3fc6f857b79f4ef0caf40",
           "status" : "passed",
           "time" : {
-            "start" : 1677032595623,
-            "stop" : 1677032597040,
-            "duration" : 1417
+            "start" : 1678245398165,
+            "stop" : 1678245398897,
+            "duration" : 732
           },
           "flaky" : false,
           "newFailed" : false,
@@ -24,10 +24,27 @@
           "retriesCount" : 0,
           "retriesStatusChange" : false,
           "parameters" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
+        }, {
+          "name" : "开发环境",
+          "uid" : "48f56e16a68b5655",
+          "parentUid" : "78fd7bd965d3fc6f857b79f4ef0caf40",
+          "status" : "passed",
+          "time" : {
+            "start" : 1678245398901,
+            "stop" : 1678245399691,
+            "duration" : 790
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
         } ],
-        "uid" : "7e1ee4adc76d7bd97b0689ea367cce70"
+        "uid" : "78fd7bd965d3fc6f857b79f4ef0caf40"
       } ],
-      "uid" : "ca05fe59f699b4901baefdeb9798afa3"
+      "uid" : "77baab5101f4572d8e1763b835e6aca6"
     } ],
     "uid" : "932b3b1be5b37d3deb0e3e7b47e76bfe"
   } ]

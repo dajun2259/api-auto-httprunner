@@ -9,7 +9,7 @@
 import requests
 
 from common.setting import Path
-from utils.file_utils.yaml_utils import YamlUtils
+from utils.file.yaml_utils import YamlUtils
 
 config = YamlUtils().read_yaml(Path.common_path + "config.yaml")
 

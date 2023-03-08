@@ -1,15 +1,15 @@
 {
-  "uid" : "37bb735d1c26e9ec",
+  "uid" : "48f56e16a68b5655",
   "name" : "开发环境",
-  "fullName" : "testcases.collect.collect_add_site_test.TestCaseCollectAddSite#test_start",
-  "historyId" : "3034f283a4577879f47bb2f2e2d27047",
+  "fullName" : "testcases.collect.test_collect_add_site.TestCaseCollectAddSite#test_start",
+  "historyId" : "d8ca51677fa2f208b451cf1798c26ac4",
   "time" : {
-    "start" : 1677032595623,
-    "stop" : 1677032597040,
-    "duration" : 1417
+    "start" : 1678245398901,
+    "stop" : 1678245399691,
+    "duration" : 790
   },
-  "description" : "TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d",
-  "descriptionHtml" : "<p>TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d</p>\n",
+  "description" : "TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725",
+  "descriptionHtml" : "<p>TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725</p>\n",
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
@@ -20,44 +20,44 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1677032595603,
-      "stop" : 1677032595623,
-      "duration" : 20
+      "start" : 1678245398146,
+      "stop" : 1678245398165,
+      "duration" : 19
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "testStage" : {
-    "description" : "TestCase ID: a78a583e-38e0-4627-9160-5fc3e8c0ba0d",
+    "description" : "TestCase ID: b10906c1-f3ed-4171-8b09-d01f60379725",
     "status" : "passed",
     "steps" : [ {
       "name" : "step: 开发平台-收藏模块-添加网站",
       "time" : {
-        "start" : 1677032595628,
-        "stop" : 1677032597039,
-        "duration" : 1411
+        "start" : 1678245398910,
+        "stop" : 1678245399691,
+        "duration" : 781
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : true,
     "stepsCount" : 1,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -65,7 +65,7 @@
     "value" : "testcases.collect"
   }, {
     "name" : "suite",
-    "value" : "collect_add_site_test"
+    "value" : "test_collect_add_site"
   }, {
     "name" : "subSuite",
     "value" : "TestCaseCollectAddSite"
@@ -74,7 +74,7 @@
     "value" : "localhost"
   }, {
     "name" : "thread",
-    "value" : "26331-MainThread"
+    "value" : "37238-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -83,14 +83,14 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "testcases.collect.collect_add_site_test"
+    "value" : "testcases.collect.test_collect_add_site"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
   "parameters" : [ {
     "name" : "param",
-    "value" : "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}"
+    "value" : "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}"
   } ],
   "links" : [ ],
   "hidden" : false,
@@ -101,6 +101,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "37bb735d1c26e9ec.json",
-  "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
+  "source" : "48f56e16a68b5655.json",
+  "parameterValues" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
 }

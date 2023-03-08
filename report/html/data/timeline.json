@@ -4,16 +4,16 @@
   "children" : [ {
     "name" : "localhost",
     "children" : [ {
-      "name" : "26331-MainThread",
+      "name" : "37238-MainThread",
       "children" : [ {
         "name" : "开发环境",
-        "uid" : "37bb735d1c26e9ec",
-        "parentUid" : "d0b9417f0a9c267e4b8946e4fac2a842",
+        "uid" : "9d26e8aa2c8a7bd8",
+        "parentUid" : "a735a4ac69bc4d6ac3386f4836aad125",
         "status" : "passed",
         "time" : {
-          "start" : 1677032595623,
-          "stop" : 1677032597040,
-          "duration" : 1417
+          "start" : 1678245398165,
+          "stop" : 1678245398897,
+          "duration" : 732
         },
         "flaky" : false,
         "newFailed" : false,
@@ -22,8 +22,25 @@
         "retriesCount" : 0,
         "retriesStatusChange" : false,
         "parameters" : [ "{'configs': '开发环境', 'case_name': '输入中文', 'host': 'https://www.wanandroid.com', 'name': '大君', 'link': '大君', 'code': 200, 'msg': '大君'}" ]
+      }, {
+        "name" : "开发环境",
+        "uid" : "48f56e16a68b5655",
+        "parentUid" : "a735a4ac69bc4d6ac3386f4836aad125",
+        "status" : "passed",
+        "time" : {
+          "start" : 1678245398901,
+          "stop" : 1678245399691,
+          "duration" : 790
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "{'configs': '开发环境', 'case_name': '输入英文', 'host': 'https://www.wanandroid.com', 'name': 'dajun', 'link': 'dajun', 'code': 200, 'msg': 'dajun'}" ]
       } ],
-      "uid" : "d0b9417f0a9c267e4b8946e4fac2a842"
+      "uid" : "a735a4ac69bc4d6ac3386f4836aad125"
     } ],
     "uid" : "be30f600e0434356d35178c8efd2dc81"
   } ]
