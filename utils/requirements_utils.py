@@ -9,7 +9,7 @@ import os
 from common.setting import Path
 
 root_path = Path.root_path
-path = root_path + "requirements.txt"
+path = root_path + os.sep + "requirements.txt"
 
 
 def freeze():
