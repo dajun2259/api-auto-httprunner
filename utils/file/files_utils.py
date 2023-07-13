@@ -159,8 +159,7 @@ def delete_all_files(file_path):
                 else:
                     os.remove(j)
         # 删除空目录
-        if os.path.exists(file_path):
-            os.removedirs(file_path)
+        os.removedirs(file_path)
 
     except Exception:
         Logger().error(traceback.format_exc())
