@@ -1,0 +1,22 @@
+====== response details ======
+status_code: 200
+headers: {
+    "Server": "Apache-Coyote/1.1",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Fri, 26 Jan 2024 09:09:27 GMT"
+}
+body: {
+    "data": {
+        "desc": "",
+        "icon": "",
+        "id": 89459,
+        "link": "dajun",
+        "name": "dajun",
+        "order": 0,
+        "userId": 145277,
+        "visible": 1
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
